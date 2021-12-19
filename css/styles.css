@@ -1,5 +1,9 @@
 /* COLORS */
-
+:root {
+    /* --navigation_background_color: #242424; */
+    --navigation_background_color: rgb(32, 34, 37);
+    --barre_de_recherche:rgb(18, 18, 18);
+  }
 html {
     --bg0:black;
     --bg1:#484848;
@@ -12,10 +16,14 @@ html {
     --b1-border:#2b2b2b;
     --b1-hover:#06a4ff;
     --b1-border-hover:#fff;
-    --b2:#06a4ff;
+    --b2:#5400ff;
     --b2-border:#06a4ff;
-    --b2-hover:#06a4ff;
+    --b2-hover:#4300cc;
     --b2-border-hover:#fff;
+    --b3:#777e90;;
+    --b3-border:#2b2b2b;
+    --b3-hover:#fcfcfd;
+    --b3-border-hover:#fff;
     --white: #fff;
     --black:#000000;
     --creme: rgb(255,250,250);
@@ -208,11 +216,48 @@ a{
 .nav2 li{
     margin: 0rem 0.5rem;
 }
-.nav2 .btn-nav {
-    padding: 0.7rem;
-    background-color: var(--b2);
-    border-radius: 0.7rem;
+
+.nav2 .btn-nav-sign {
+    
+    padding: 0.7rem 1rem;
+    background-color: none;
+    box-shadow: inset 0 0 0 2px var(--b3);;
+    height: 48px;
+    border-radius: 24px;
     word-wrap: inherit;
+    
+}
+
+
+.nav2 .btn-nav-sign:hover{
+    /* background: #044eff; */
+    transition: all .4s;
+    box-shadow: inset 0 0 0 2px var(--b3-hover);;
+}
+
+.nav2 .btn-nav-login {
+    margin-right: 2.5rem;
+    padding: 0.7rem 1rem;
+    background-color: var(--b2);
+    /* box-shadow: inset 0 0 0 2px #5400ff; */
+    height: 48px;
+    border-radius: 24px;
+    word-wrap: inherit;
+    
+}
+.nav2 .btn-nav-login:hover{
+    /* background: #044eff; */
+    transition: all .4s;
+    background: var(--b2-hover);
+}
+.Header_icon{
+    font-family: FontAwesomeSolid;
+    font-size: 10px;
+    margin-right: 4px;
+}
+
+.user-solid{
+    height:0.7rem;
 }
 /* DARKMODE BUTTON */
 .theme-input[type=checkbox]{
@@ -221,7 +266,7 @@ a{
     display: none;
 }
 
-input::.theme-input {
+input::theme-input {
     color: rgb(0, 0, 0);
     }
 
@@ -295,9 +340,9 @@ input::.theme-input {
 /* SIDEBAR */
 .sidebar {
     position: fixed;
-    width: 33%;
+    width: 20%;
     height: 95vh;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 .sidebar-action-scroll{
     height: 100vh;
@@ -317,7 +362,7 @@ input::.theme-input {
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    background-color: var(--bg2);
+    background-color:  var(--barre_de_recherche);
     height: 5%;
     padding: 5%;
     position: sticky;
@@ -333,7 +378,7 @@ input::.theme-input {
 /* ITEMS SIDEBAR */
 .items-sidebar{
     overflow-x: hidden;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     width: 100%;
     height: 89.7vh;
 }
@@ -389,9 +434,9 @@ input::.theme-input {
 }
 /* SIDEBAR CLOSE */
 .sidebar-close {
-    background-color: var(--bg4);
+    background-color: var(--black);
     flex-direction: column;
-    width: 7%;
+    width: 3%;
     list-style: none;
     height: 100%;
     z-index: 3000;
@@ -399,7 +444,7 @@ input::.theme-input {
 .sidebar-close:hover {
     background-color: var(--bg5);
     flex-direction: column;
-    width: 7%;
+    width: 3%;
     list-style: none;
     height: 100%;
 }
@@ -428,15 +473,16 @@ input::.theme-input {
 .main-content-scroll,
 .footer-content,
 .footer-content-action {
+    /* overflow-y: hidden; */
     transition: all 250ms !important;
 }
 .main-content{
     width: 85%;
     margin-top: 8vh;
-    margin-left: 15%;
+    margin-left: 20%;
     min-height: 84vh;
     color: var(--creme);
-    
+    overflow-x: hidden; 
     background-color: #33373a;
         
       
@@ -501,6 +547,7 @@ input::.theme-input {
     margin-left: 0%;
 }
 .bg-footer{
+    overflow-x: hidden; 
     background-color: var(--bg0);
     color: var(--cp1);
 }
@@ -527,11 +574,17 @@ input::.theme-input {
     display: flex;
     width: 50px;
 }
+body{
+    
+    overflow-x: hidden;
 
+}
 #contenuBox{
     /* transition-delay: 3s;
     transition-property: background-color; */
     /* animation-delay: 2s; */
+    display: flex;
+    flex-direction: column;
     background-color: #33373a;
     
 }
@@ -554,6 +607,17 @@ input::.theme-input {
     font-size: 0.7REM;
 }
 
+/*header*/
+#navigation{
+    background-color: var(--navigation_background_color);
+    color: white;
+    border-right: 3px solid #000000;
+    max-width: 400px;
+}
+
+
+/*sidebar*/
+
 input::placeholder {
     color: rgb(228, 0, 0);
     /* font-family: Arial, Helvetica, bold; */
@@ -563,12 +627,193 @@ input::placeholder {
     color: rgb(127, 172, 115);
 }
 
+/*
+ * Just a quick hamburger
+ */
+ #menuToggle
+ {
+     /* right: -500; */
+ 
+   display: block;
+   position: absolute;
+   top: 1vh;
+   padding-top: 0.7rem;
+   right:17px; /*positionnement */
+   
+   z-index: 1;
+   
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ #menuToggle a
+ {
+   text-decoration: none;
+   color: #232323;
+   
+   transition: color 0.3s ease;
+ }
+ 
+ #menuToggle a:hover
+ {
+   color: tomato;
+ }
+ 
+ 
+ #menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: 9px;
+   left: -3px;
+   
+   cursor: pointer;
+   
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ #menuToggle span
+ {
+   display: block;
+   width: 33px;
+   height: 4px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #cdcdcd;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ #menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ #menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ #menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #232323;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ #menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ #menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -170px; /*sortie*/
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(+100%, 0);
+   
+   transition: transform 1.0s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+ #menu
+ {
+   position: absolute;
+   width: 300px;
+   margin: -100px 0 0 -170px; /*sortie*/
+   padding: 50px;
+   padding-top: 125px;
+   
+   background: #ededed;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   
+   transform-origin: 0% 0%;
+   transform: translate(+100%, 0);
+   
+   transition: transform 1.0s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ #menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+ }
+ 
+ /*
+  * And let's slide it in from the left
+  */
+ #menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+
     
 .class-1{
     color: #fff;
     background-color:#24282a;
     /* transition: all 20s ease-out; */
-    margin: 3% 0% 1% 0%;
+    margin: 3% 0% 1% 4%;
     padding: 0% 3%;
     font-size: large;
 
@@ -579,7 +824,7 @@ input::placeholder {
 }
 .class-2{
     background-color:#2a4151;
-    margin: 0%;
+    margin: 0% 0% 0% 4%;
     padding: 0% 3%;
     font-size: smaller;
 
@@ -590,7 +835,7 @@ input::placeholder {
 }
 .class-3{
     background-color:blue;
-    margin: 3% 0%;
+    margin: 3% 0% 1% 4%;
     padding: 0% 3%; 
     font-size: smaller;
     animation-duration: 0.4s;
@@ -600,7 +845,7 @@ input::placeholder {
 }
 .class-4{
     background-color:hotpink;
-    margin: 3% 0%;
+    margin: 3% 0% 1% 4%;
     padding: 0% 3%;
     font-size: smaller;
     animation-duration: 0.4s;
@@ -609,3 +854,48 @@ input::placeholder {
     animation-iteration-count: initial;
 }
 
+/*******************************************************Anitations */
+@keyframes glissementClass1 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes glissementClass2 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes glissementClass3 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+  @keyframes glissementClass4 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }

@@ -7,7 +7,7 @@ ob_start();
         <div class="general-sidebar">
             <div class="container-sidebar">
             
-            
+
             
             <form class="search-bar">
 

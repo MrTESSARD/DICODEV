@@ -2,7 +2,7 @@
     session_start();
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,11 +48,41 @@
             }
             else {
                 ?> 
+                
                 <li>
-                    <a class="btn-nav" href="?auth=login">Se connecter</a>
+                    <a class="btn-nav-sign" href="?auth=signup">Inscription</a>
                 </li>
                 <li>
-                    <a class="btn-nav" href="?auth=signup">S'inscrire</a>
+                    <a class="btn-nav-login" href="?auth=login">
+                        <span>
+                        <img class="user-solid"
+                            src="../img/user-solid.svg"
+                            alt="user logo"
+                            
+                             
+                            />
+                        </span>Connection</a>
+                </li>
+                <li>
+                    <nav role="navigation">
+                            <div id="menuToggle">
+                                
+                                <input type="checkbox" />
+                                
+                                
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            
+                                <ul id="menu">
+                                <a href="http://tessard.pro/formation/projets/dicodev/public"><li>Home</li></a>
+                                <a href="#"><li>About</li></a>
+                                <a href="#"><li>Info</li></a>
+                                <a href="#"><li>Contact</li></a>
+                                <a href="http://tessard.pro/formation" target="_blank"><li>TESSARD</li></a>
+                                </ul>
+                            </div>
+                        </nav>
                 </li>
             <?php 
             }
