@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/Logo.bmp" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
@@ -29,13 +30,43 @@
             if(isset($_SESSION['userId'])) {
             ?>
                 <li>
-                    <a href="?auth=profile"><img class="" src="https://via.placeholder.com/30x30" alt=""></a>
+                    <a href="?auth=profile">
+                    
+                    </a>
                 </li>
                 <li>
-                    <a class="" href="?auth=profile"><?= htmlspecialchars($_SESSION['userUsername']); ?></a>
+                    <a class="btn-nav-login" href="?auth=profile"><span>
+                        <img class="user-solid"
+                            src="../img/user-solid.svg"
+                            alt="user logo"
+                            
+                             
+                            />
+                        </span>
+                        <?= htmlspecialchars($_SESSION['userUsername']); ?></a>
                 </li>
                 <li>
-                    <a class="btn-nav" href="?auth=logout">Logout</a>
+                    <!-- <a class="btn-nav-sign" href="?auth=logout">Logout</a> -->
+                    <nav role="navigation">
+                            <div id="menuToggle">
+                                
+                                <input type="checkbox" />
+                                
+                                
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            
+                                <ul id="menu">
+                                <a href="http://tessard.pro/formation/projets/dicodev/public"><li>Home</li></a>
+                                <a href="#"><li>About</li></a>
+                                <a href="#"><li>Info</li></a>
+                                <a href="#"><li>Contact</li></a>
+                                <a href="http://tessard.pro/formation" target="_blank"><li>TESSARD</li></a>
+                                <a href="?auth=logout"><li>Déconnexion</li></a>
+                            </ul>
+                            </div>
+                        </nav>
                 </li>
             <?php 
             }
@@ -54,7 +85,8 @@
                             
                              
                             />
-                        </span>Connection</a>
+                        </span>
+                        Connection</a>
                 </li>
                 <li>
                     <nav role="navigation">

@@ -34,10 +34,10 @@ ob_start();
                             <a data-toggle="dropdown" href="?<?=htmlspecialchars($route)?>=src&amp;<?=htmlspecialchars($route)?>=src&amp;<?=htmlspecialchars($table)?>=<?=htmlspecialchars($tableLangage)?>&amp;<?=htmlspecialchars($tuple)?>=<?=htmlspecialchars($barNavLangages[$key1][$tableLangageLangage])?>">
                                 <i class="fas fa-caret-right">
                                 </i>
-                                <a href="index.php?<?=$route?>=src&amp;<?=$table?>=<?=$tableLangage?>&amp;<?=$tuple?>=<?=$barNavLangages[$key1][$tableLangageLangage]?>">
-										<img class="logo"	src="
+                                <a class="logo" href="index.php?<?=$route?>=src&amp;<?=$table?>=<?=$tableLangage?>&amp;<?=$tuple?>=<?=$barNavLangages[$key1][$tableLangageLangage]?>">
+										<img 	src="
 										<?= htmlspecialchars($barNavLangages[$key1][$tableLangageLogo])?>" 
-										alt="LOGO">&nbsp;-&nbsp;
+										alt="LOGO">&nbsp;
 										
 										
 										<?=htmlspecialchars($barNavLangages[$key1][$tableLangageLangage])  ?>
@@ -55,10 +55,12 @@ ob_start();
                                     <i class="fas fa-caret-right"></i>
                                     
                                     <span>
-												<a  href="index.php?<?=$route?>=src&amp;<?=$table?>=<?=$tablePropriete?>&amp;<?=$tuple?>=<?=$barNavPropriete[$key2][$tableProprietePropriete]?>">
+                                    </a><a class="propriete-sidebar" href="index.php?<?=$route?>=src&amp;<?=$table?>=<?=$tablePropriete?>&amp;<?=$tuple?>=<?=$barNavPropriete[$key2][$tableProprietePropriete]?>">
 													<?php echo $barNavPropriete[$key2][$tableProprietePropriete]?>
 												</a>
+                                                
 										</span>
+                                
                                 <?php 
                                 foreach ($barNavFonctions as $key3 => $value3)
                                 {

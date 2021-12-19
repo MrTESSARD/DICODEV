@@ -12,7 +12,7 @@
         <div><?= htmlspecialchars($_SESSION['userUsername']); ?></div>
         <div><?= htmlspecialchars($_SESSION['userEmail']); ?></div>
     </div>
-    <a class="btn-input" href="?auth=profile/update">Edit</a>
+    <a class="btn-nav-edit" href="?auth=profile/update">Modifier</a>
 <?php
     }
     else 
