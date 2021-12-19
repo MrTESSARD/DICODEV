@@ -19,14 +19,7 @@
             <li class="h1 row">
                 <a href="?home"><img src="../img/Logo.bmp" alt=""></a>
             </li>
-            <div class="info-header row">
-                <li>
-                    <a href="?home">à propos</a>
-                </li>
-                <li>
-                    <a href="?home">contact</a>
-                </li>
-            </div>
+            
         </ul>
         <ul class="nav2 row col-50">
             <li class="toggle-container">

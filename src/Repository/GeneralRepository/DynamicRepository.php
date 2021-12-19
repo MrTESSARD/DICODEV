@@ -84,12 +84,13 @@ class DynamicRepository extends ManagerRepository {
             # code...
         }
         elseif ($get["table"]=="propriete") {
-            $requeteBodyBloc = $this->createQuery("SELECT * FROM $tablePropriete where $tableProprietePropriete= '" .$_GET[$tuple]."'");
+            // $requeteBodyBloc = $this->createQuery("SELECT * FROM $tablePropriete where $tableProprietePropriete= '" .$_GET[$tuple]."'");
+            $requeteBodyBloc = $this->createQuery("SELECT $tableLangage.$tableLangageCss1,$tableLangage.$tableLangageLangage, $tablePropriete.$tableProprieteCss1, $tablePropriete.$tableProprietePropriete,$tablePropriete.$tableProprieteCss2, $tablePropriete.$tableProprieteData1  FROM $tablePropriete INNER JOIN $tableLangage ON $tablePropriete.$tableProprieteId_langage = $tableLangage.$tableLangageId where $tableProprietePropriete= '" .$_GET[$tuple]."'");
             $requeteBodyBloc = $this->BodyBloc($requeteBodyBloc);
             return $requeteBodyBloc;
         }
         elseif ($get["table"]=="fonctions") {
-            $requeteBodyBloc = $this->createQuery("SELECT * FROM $tableFonctions where $tableFonctionFonction= '" .$_GET[$tuple]."'");
+            $requeteBodyBloc = $this->createQuery("SELECT $tableLangage.$tableLangageCss1,$tableLangage.$tableLangageLangage, $tablePropriete.$tableProprieteCss1, $tablePropriete.$tableProprietePropriete, $tableFonctions.$tableFonctionCss1, $tableFonctions.$tableFonctionFonction, $tableFonctions.$tableFonctionCss2, $tableFonctions.$tableFonctionData1  FROM $tablePropriete INNER JOIN $tableLangage ON $tablePropriete.$tableProprieteId_langage = $tableLangage.$tableLangageId INNER JOIN $tableFonctions ON $tableFonctions.$tableFonctionId_propriete = $tablePropriete.$tableLangageId where $tableFonctionFonction= '" .$_GET[$tuple]."'");
             $requeteBodyBloc = $this->BodyBloc($requeteBodyBloc);
 
             return $requeteBodyBloc;

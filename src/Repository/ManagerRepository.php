@@ -32,6 +32,7 @@ class ManagerRepository
     public function createQuery($sql,  $parameters = null)
     {
         $result = $this->checkConnection()->prepare($sql);
+        // var_dump($result);
         // $result->setFetchMode(PDO::FETCH_CLASS, static::class);
         $result->setFetchMode(PDO::FETCH_ASSOC);
 

@@ -15,24 +15,14 @@
         "fonction": "apache_get_version()"
     },
     {
+        "langage": "PHP",
+        "propriete": "APC",
+        "fonction": "apc_add"
+    },
+    {
         "langage": "CSS",
         "propriete": "Animations  Transitions",
         "fonction": "after"
-    },
-    {
-        "langage": "SQL",
-        "propriete": "SQL SELECT",
-        "fonction": "SELECT"
-    },
-    {
-        "langage": "HTML",
-        "propriete": "M\u00e9thodes",
-        "fonction": "POST"
-    },
-    {
-        "langage": "HTML",
-        "propriete": "M\u00e9thodes",
-        "fonction": "GET"
     },
     {
         "langage": "JavaScript",
@@ -45,8 +35,18 @@
         "fonction": "Acceder (via son index) a un element du tableau"
     },
     {
-        "langage": "PHP",
-        "propriete": "APC",
-        "fonction": "apc_add"
+        "langage": "HTML",
+        "propriete": "M\u00e9thodes",
+        "fonction": "POST"
+    },
+    {
+        "langage": "HTML",
+        "propriete": "M\u00e9thodes",
+        "fonction": "GET"
+    },
+    {
+        "langage": "SQL",
+        "propriete": "SQL SELECT",
+        "fonction": "SELECT"
     }
 ]

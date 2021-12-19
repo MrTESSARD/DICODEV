@@ -28,6 +28,7 @@ html {
     --black:#000000;
     --creme: rgb(255,250,250);
     --focus: rgb(170,238,13);
+    --boxBorderLight: var(--black)
     
 }
 html[data-theme=dark] {
@@ -202,10 +203,10 @@ a{
     align-items: center;
     justify-content: flex-start;
 }
-.info-header {
+/* .info-header {
     align-items: center;
     justify-content: space-between;
-}
+} */
 .info-header a {
     padding: 0.5rem;
 }
@@ -583,10 +584,16 @@ body{
     /* transition-delay: 3s;
     transition-property: background-color; */
     /* animation-delay: 2s; */
+    padding: 3% 3% 3% 0%;
     display: flex;
     flex-direction: column;
     background-color: #33373a;
     
+}
+.bienvenue-message{
+    display: flex;
+    align-items: center;
+    padding-top: 15vh;
 }
 
 .name{
@@ -814,7 +821,7 @@ input::placeholder {
     background-color:#24282a;
     /* transition: all 20s ease-out; */
     margin: 3% 0% 1% 4%;
-    padding: 0% 3%;
+    padding: 0.5% 3%;
     font-size: large;
 
     animation-duration: 0.4s;
@@ -822,10 +829,51 @@ input::placeholder {
     animation-name: glissementClass1;
     animation-iteration-count: initial;
 }
+.class-11{
+    
+    color: #fff;
+    /* background-color:#3a5c3f; */
+    /* transition: all 20s ease-out; */
+    margin: 3% 0% 1% 2%;
+    padding: 0.5% 0% 0.5% 3%;
+    font-size: large;
+
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+    animation-name: glissementClass11;
+    animation-iteration-count: initial;
+}
+.class-21{
+    
+    color: #fff;
+    /* background-color:#3a5c3f; */
+    /* transition: all 20s ease-out; */
+    margin: 0% 0% 1% 3%;
+    padding: 0.5% 0% 0.5% 3%;
+    font-size: large;
+
+    animation-duration: 0.2s;
+    animation-delay: 0s;
+    animation-name: glissementClass21;
+    animation-iteration-count: initial;
+}
+h1{
+    display: flex;
+    align-items: center;
+}
+h1:after {
+    
+    content: '';
+    flex-grow: 1;
+    height: 3px;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+    background: var(--boxBorderLight);
+}
 .class-2{
     background-color:#2a4151;
     margin: 0% 0% 0% 4%;
-    padding: 0% 3%;
+    padding: 1% 3%;
     font-size: smaller;
 
     animation-duration: 0.4s;
@@ -836,7 +884,7 @@ input::placeholder {
 .class-3{
     background-color:blue;
     margin: 3% 0% 1% 4%;
-    padding: 0% 3%; 
+    padding: 0.5% 3%; 
     font-size: smaller;
     animation-duration: 0.4s;
     animation-delay: 0.2s;
@@ -846,7 +894,7 @@ input::placeholder {
 .class-4{
     background-color:hotpink;
     margin: 3% 0% 1% 4%;
-    padding: 0% 3%;
+    padding: 1% 3%;
     font-size: smaller;
     animation-duration: 0.4s;
     animation-delay: 0.3s;
@@ -862,7 +910,18 @@ input::placeholder {
     }
   
     to {
-      margin-left: 0%;
+      margin-left: 4%;
+      width: 100%;
+    }
+  }
+@keyframes glissementClass11 {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 4%;
       width: 100%;
     }
   }
@@ -873,7 +932,7 @@ input::placeholder {
     }
   
     to {
-      margin-left: 0%;
+      margin-left: 4%;
       width: 100%;
     }
   }
@@ -884,7 +943,7 @@ input::placeholder {
     }
   
     to {
-      margin-left: 0%;
+      margin-left: 4%;
       width: 100%;
     }
   }
@@ -895,7 +954,7 @@ input::placeholder {
     }
   
     to {
-      margin-left: 0%;
+      margin-left: 4%;
       width: 100%;
     }
   }
