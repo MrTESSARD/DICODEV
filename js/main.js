@@ -3,6 +3,8 @@ var tableFonctions ='fonctions';
 var tuple ='tuple';
 var route ='route';
 
+
+
 // DARKMODE
 let checkbox = document.querySelector('input[name=theme]');
 
@@ -120,9 +122,6 @@ function findMatches(wordToMatch, proprieties) {
     const regex = new RegExp(wordToMatch, 'gi');
 
     return place.fonction.match(regex) || place.propriete.match(regex) || place.langage.match(regex)
-
-    
-
   });
 
 }
@@ -156,10 +155,6 @@ function displayMatches() {
     
     <a href="index.php?${route}=src&${table}=${tableFonctions}&${tuple}=${fonctionName}" <span class="fonction" style=>${fonctionName}</span> </a>
 
-    
-    
-    
-    
     </li>
     
     `;
@@ -190,16 +185,57 @@ function displayMatches() {
   }
 }
 
-
-
-
 const searchInput = document.querySelector('.search');
-
-
 const suggestions = document.querySelector('.suggestions');
-
-
-
 searchInput.addEventListener('change', displayMatches);
-
 searchInput.addEventListener('keyup', displayMatches);
+
+/**********************************************souris*************** */
+function fillCircle()
+{
+  var canvas = document.getElementById("souris");
+  var context = canvas.getContext("2d");
+  context.beginPath();
+  context.fillStyle="#FFFFFF"
+  context.arc(80, 80, 5, 0, 2 * Math.PI);
+  context.fill();
+}
+fillCircle(); 
+
+$(document).ready(function(){
+  /*On passe une référence à l'objet event en argument pour pouvoir 
+  utiliser ses propriétés*/
+  $("body").mousemove(function(event){
+      //On récupère la position de la souris dans le document
+      // let pageCoords = "(" + event.pageX + ", " + event.pageY + ")";
+      let pageCoords = "(" + event.pageX + ", " + event.pageY + ")";
+      // var x=text(event.pagex);
+      let x=(event.pageX);
+      x=x-80;
+      let y=( event.pageY);
+      y=y-80;
+
+      console.log("(" + x + ", " + y + ")");
+
+      //Affiche cette position dans un span
+      // $("span").text(pageCoords);
+      // $("souris").text(pageCoords);
+
+      // $("#souris").offset({left:x,top:y});
+      $("#souris").offset({left:x,top:y});
+      $("body").css({
+        'cursor' : 'none'
+     });
+      $("#souris").css({
+        
+          // 'background': 'radial-gradient(circle at 50% 0,            rgba(255,0,0,.5),            rgba(255,0,0,0) 70.71%),          radial-gradient(circle at 6.7% 75%,            rgba(0,0,255,.5),            rgba(0,0,255,0) 70.71%),          radial-gradient(circle at 93.3% 75%,            rgba(0,255,0,.5),            rgba(0,255,0,0) 70.71%) beige      border-radius: 50%;'
+          // 'background': ' radial-gradient(circle closest-side,            red, yellow 10%, #1e90ff 50%, beige)'
+        
+     });
+      // * {
+      // cursor: none;
+      // }
+    });
+});
+
+

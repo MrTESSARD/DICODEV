@@ -58,7 +58,7 @@
                                 <span></span>
                             
                                 <ul id="menu">
-                                <a href="http://tessard.pro/formation/projets/dicodev/public"><li>Home</li></a>
+                                <a href="?home"><li>Home</li></a>
                                 <a href="#"><li>About</li></a>
                                 <a href="#"><li>Info</li></a>
                                 <a href="#"><li>Contact</li></a>
@@ -100,7 +100,7 @@
                                 <span></span>
                             
                                 <ul id="menu">
-                                <a href="http://tessard.pro/formation/projets/dicodev/public"><li>Home</li></a>
+                                <a href="?home"><li>Home</li></a>
                                 <a href="#"><li>About</li></a>
                                 <a href="#"><li>Info</li></a>
                                 <a href="#"><li>Contact</li></a>

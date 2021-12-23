@@ -22,4 +22,21 @@ class ManagerController extends ManagerRepository{
     {
         require_once '../templates/auth/profile.php';
     }
+    public function code401()
+    {
+        require_once '../templates/pagesErreur/401.php';
+    }
+    public function code402()
+    {
+        require_once '../templates/pagesErreur/402.php';
+        }
+    public function code403()
+    {
+        require_once '../templates/pagesErreur/403.php';
+        }
+    public function code404()
+    {
+        require_once '../templates/pagesErreur/404.php';
+        }
+
 }

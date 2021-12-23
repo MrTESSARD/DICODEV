@@ -5,7 +5,7 @@
 <?php
 // var_dump($BodyBloc)		;			
   foreach ($BodyBloc as $key1 => $value1) {//a ligne : $key - nom colonne : $y - contenu de la colonne
-    echo  "<div class='class-". htmlspecialchars($BodyBloc[$key1][$tableLangageCss1]+10 )."'><h1> " . htmlspecialchars($BodyBloc[$key1][$tableLangageLangage] ). " </h1></div>\n";
+    echo  "<div class='class-". htmlspecialchars($BodyBloc[$key1][$tableLangageCss1]+10 )."'><h1 class='borderLine'> " . htmlspecialchars($BodyBloc[$key1][$tableLangageLangage] ). " </h1></div>\n";
     echo  "<div class='class-". htmlspecialchars($BodyBloc[$key1][$tableProprieteCss1]+20 )."'><h2> " . htmlspecialchars($BodyBloc[$key1][$tableProprietePropriete] ). " </h2></div>\n";
     echo  "<div class='class-". htmlspecialchars($BodyBloc[$key1][$tableFonctionCss1] )."'> " . htmlspecialchars($BodyBloc[$key1][$tableFonctionFonction] ). " </div>\n";
     echo  "<div class='class-". htmlspecialchars($BodyBloc[$key1][$tableFonctionCss2] )."'> " . htmlspecialchars($BodyBloc[$key1][$tableFonctionData1] ). " </div>\n";

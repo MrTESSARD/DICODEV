@@ -31,6 +31,8 @@ html {
     --focus: rgb(170,238,13);
     --boxBorderLight: var(--black);
     --boxBorder:var(--black);
+    --main-background:#33373a;
+    --main-background-code404:rgb(82,67,55);
     
 }
 html[data-theme=dark] {
@@ -508,7 +510,7 @@ input::theme-input {
     min-height: 84vh;
     color: var(--creme);
     overflow-x: hidden; 
-    background-color: #33373a;
+    background-color: var(--main-background);
         
       
 }
@@ -604,7 +606,7 @@ input::theme-input {
     /* padding-right: 400px; */
 
 }
-ul{
+.dropdown ul{
     display: flex;
     flex-wrap: wrap;
 }
@@ -823,7 +825,7 @@ input::placeholder {
    position: absolute;
    width: 300px;
    margin: -100px 0 0 -170px; /*sortie*/
-   padding: 50px;
+   padding: 5px;
    padding-top: 125px;
    
    background: #ededed;
@@ -897,10 +899,31 @@ input::placeholder {
     animation-iteration-count: initial;
 }
 h1{
+
     display: flex;
     align-items: center;
 }
-h1:after {
+/* h1:after {
+    
+    content: '';
+    flex-grow: 1;
+    height: 3px;
+    margin-top: -0.5rem;
+    margin-left: 1rem;
+    background: var(--boxBorderLight);
+} */
+h3{
+    font-size: 0.8rem;
+}
+.fontCentre{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.borderLine::after {
     
     content: '';
     flex-grow: 1;
@@ -943,6 +966,59 @@ h1:after {
     animation-name: glissementClass4;
     animation-iteration-count: initial;
     line-height: 200%;
+}
+
+/*code Erreur*/
+.codeErreur{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: space-around;
+    align-items: center;
+}
+
+.borderLineAround{
+
+    display: flex;
+    align-items: center;
+    padding-top: 0.5rem;
+
+}
+.borderLineAround::before{
+
+
+    content: '';
+    flex-grow: 1;
+    height: 3px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: var(--boxBorderLight);
+
+}
+.borderLineAround::after{
+
+
+    content: '';
+    flex-grow: 1;
+    height: 3px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: var(--boxBorderLight);
+
+}
+.video404{
+    position: relative;
+    left: -10px;
+    min-height: 100%;
+    min-width: auto;  
+    /* On indique un redimensionnement proportionnel */
+    width: 100%;
+     /* height: 800px;  */
+    padding: 0.2rem 0rem !important;
+    /* background: linear-gradient(0.50turn, rgb(82,67,55), var(--main-background) white); */
+
+
+    
 }
 
 /*******************************************************Anitations */

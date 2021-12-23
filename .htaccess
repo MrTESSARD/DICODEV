@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^index.html$ /index.php?page=accueil [L]
+
+ErrorDocument 401 http://localhost/dicodev/DicoDev/401.html
+ErrorDocument 402 http://localhost/dicodev/DicoDev/402.html
+ErrorDocument 403 http://localhost/dicodev/DicoDev/403.html
+ErrorDocument 404 http://localhost/dicodev/DicoDev/public/index.php?code=404

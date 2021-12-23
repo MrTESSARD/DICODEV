@@ -80,9 +80,15 @@ class Router
                 }  
             }
         }
+        /* CODES ERREUR*/
+        if (isset($_GET['code'])){
+            if($_GET['code'] === "404"){
+                $this->managerController->code404();
+            }
+        }
         else
         {
-            $this->managerController->home();
+            // $this->managerController->home();
         }
 
         $this->managerController->loadFooter();
