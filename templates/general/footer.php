@@ -23,26 +23,7 @@
                     <a target="_blank" href="">thierno</a>
                 </li>
             </ul>
-        <!-- <ul class="row legalNotice">
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-            <il class="il-footer">
-                <a href="" class="a-footer">Test</a>
-            </il>
-        </ul> -->
+        
         <div class="copyright">
             <h6>ⓒ 2021. <a href="/academie-digitale">ACADÉMIE DIGITALE</a>. TOUS DROITS RÉSERVES</h6>
         </div>

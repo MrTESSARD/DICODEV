@@ -41,4 +41,7 @@ $table="table";
 $tuple="tuple";
 //ROUTES
 $route="route";
+
+// define("MYCONSTANT", 100);
+
 ?>

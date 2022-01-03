@@ -1,5 +1,6 @@
 <!-- <?php
 header("HTTP/1.0 404 Not Found");
+
 ?> -->
 <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 <div class=codeErreur>
@@ -22,6 +23,7 @@ header("HTTP/1.0 404 Not Found");
     </div>
     <p class="fontCentre">
     Détendez-vous, tout va bien se passer !
+   
     </p>
 
 </div>

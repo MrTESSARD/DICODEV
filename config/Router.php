@@ -48,7 +48,11 @@ class Router
                     {
                         echo "<div class='error'>Erreur, les mots de passe sont différents.</div>";
                     }
+                    
+                    
+                    
                 }
+                
 
                 $this->generalAuthController->signupPage($_POST);
             }
@@ -72,6 +76,9 @@ class Router
             {
                 $this->managerController->home();
             }
+            else{
+                $this->managerController->code404();
+            }
         }
         if(isset($_GET['route'])){
             if($_GET['route'] === "src"){
@@ -88,6 +95,9 @@ class Router
         }
         else
         {
+            
+            // $this->managerController->code404();
+            
             // $this->managerController->home();
         }
 
